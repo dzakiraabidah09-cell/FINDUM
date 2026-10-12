@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lapor Barang Ditemukan — FINDUM Lost &amp; Found Kampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><div class="w nav">
+<a class="logo" href="index.html"><i>🔎</i>FINDUM</a>
+<button class="burger" id="bg" aria-label="Buka menu">Menu</button>
+<nav class="links" id="lk"><a href="index.html">Beranda</a><a href="cari.html">Cari Barang</a><a href="laporkan.html" class="on">Laporkan</a><a href="cara-kerja.html">Cara Kerja</a><a href="faq.html">FAQ</a></nav></div></header>
+<main><div class="w">
+<div class="ph"><h1>Menemukan barang?</h1><p>Bantu kembalikan barang ini kepada pemiliknya.</p></div>
+<form class="form" data-f="temuan">
+<div class="f"><label for="ph">Foto barang *</label>
+<label class="up" for="ph">📸 Pilih atau ambil foto barang<small>Maks. 5 MB. Foto dari beberapa sisi akan membantu pemilik mengenalinya.</small><input id="ph" type="file" accept="image/*" required></label>
+<div id="pv"></div>
+<p class="hint" style="margin-top:8px">Hindari memotret data pribadi yang terbaca jelas, seperti nomor identitas di KTM. Simpan itu untuk verifikasi.</p></div>
+<div class="row"><div class="f"><label for="t1">Nama barang *</label><input id="t1" name="n" required placeholder="Contoh: Tumbler hitam"></div>
+<div class="f"><label for="t2">Kategori *</label><select id="t2" name="cat" required data-cat></select></div></div>
+<div class="row"><div class="f"><label for="t3">Lokasi ditemukan *</label><input id="t3" name="loc" required placeholder="Contoh: Gedung FIK lantai 2"></div>
+<div class="f"><label for="t4">Tanggal &amp; waktu ditemukan *</label><input id="t4" name="date" type="datetime-local" required></div></div>
+<div class="f"><label>Tandai lokasi di denah kampus</label>
+<svg id="map" viewBox="0 0 600 320" role="group" aria-label="Denah kampus, pilih gedung tempat barang ditemukan">
+<rect class="mb" width="600" height="320"/><rect class="rd" x="0" y="148" width="600" height="28"/><rect class="rd" x="288" y="0" width="28" height="320"/>
+<g data-loc="Gedung FIK" data-x="130" data-y="95" tabindex="0" role="button"><rect x="30" y="30" width="200" height="90" rx="12"/><text x="130" y="80" text-anchor="middle">Gedung FIK</text></g>
+<g data-loc="Perpustakaan" data-x="450" data-y="95" tabindex="0" role="button"><rect x="340" y="30" width="220" height="90" rx="12"/><text x="450" y="80" text-anchor="middle">Perpustakaan</text></g>
+<g data-loc="Gedung A" data-x="85" data-y="270" tabindex="0" role="button"><rect x="30" y="205" width="110" height="85" rx="12"/><text x="85" y="253" text-anchor="middle">Gedung A</text></g>
+<g data-loc="Gedung G" data-x="215" data-y="270" tabindex="0" role="button"><rect x="160" y="205" width="110" height="85" rx="12"/><text x="215" y="253" text-anchor="middle">Gedung G</text></g>
+<g data-loc="Gedung Kuliah Bersama" data-x="405" data-y="270" tabindex="0" role="button"><rect x="340" y="205" width="130" height="85" rx="12"/><text x="405" y="244" text-anchor="middle">Gedung Kuliah</text><text x="405" y="262" text-anchor="middle">Bersama</text></g>
+<g data-loc="Lapangan" data-x="527" data-y="270" tabindex="0" role="button"><rect x="485" y="205" width="85" height="85" rx="12"/><text x="527" y="253" text-anchor="middle">Lapangan</text></g>
+<g id="pin" style="display:none;pointer-events:none"><path d="M0 0C-9-12-14-20-14-28a14 14 0 1 1 28 0c0 8-5 16-14 28z" fill="#ff4d8d" stroke="#123B68" stroke-width="2"/><circle cy="-28" r="5" fill="#fff"/></g>
+</svg>
+<p id="ml" role="status"></p>
+<p class="hint">Denah ilustrasi. Klik gedung untuk mengisi lokasi, lalu tambahkan detail seperti lantai di kolom lokasi.</p></div>
+<div class="f"><label for="t5">Ciri-ciri barang *</label><textarea id="t5" name="d" required placeholder="Warna, merek, bentuk, stiker, tanda khusus, dll."></textarea></div>
+<div class="f"><label>Kondisi barang *</label><div class="rad"><label><input type="radio" name="k" checked> Baik</label><label><input type="radio" name="k"> Rusak ringan</label><label><input type="radio" name="k"> Lainnya</label></div></div>
+<div class="f"><label for="t6">Lokasi penitipan *</label><input id="t6" required placeholder="Contoh: Pos Satpam / Ruang Lost &amp; Found"></div>
+<div class="row"><div class="f"><label for="t7">Nama penemu *</label><input id="t7" required placeholder="Nama kamu"></div><div class="f"><label for="t8">Kontak penemu *</label><input id="t8" required placeholder="No. HP atau email"></div></div><p class="hint">Data penemu tidak ditampilkan secara publik.</p>
+<button class="btn full" type="submit">Kirim laporan barang ditemukan</button>
+<div class="ok" role="status"><b>Laporan berhasil dikirim! 🎉</b><br>Terima kasih sudah membantu mengembalikan barang kepada pemiliknya. Barangnya sudah muncul di <a href="cari.html">Cari Barang</a>.</div>
+</form></div></main>
+<footer><div class="w"><div class="fl">
+<div><div class="logo" style="margin-bottom:8px">FINDUM</div>Lost &amp; Found Kampus<br>Satu platform untuk membantu barang kembali kepada pemiliknya.</div>
+<div><a href="index.html">Beranda</a><a href="cari.html">Cari Barang</a><a href="lapor-temuan.html">Lapor Temuan</a><a href="lapor-hilang.html">Lapor Kehilangan</a><a href="cara-kerja.html">Cara Kerja</a><a href="faq.html">FAQ</a></div>
+</div><small>© 2026 FINDUM. Data yang tampil adalah simulasi.</small></div></footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/report.js"></script>
+</body>
+</html>

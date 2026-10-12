@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Klaim Barang — FINDUM Lost &amp; Found Kampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><div class="w nav">
+<a class="logo" href="index.html"><i>🔎</i>FINDUM</a>
+<button class="burger" id="bg" aria-label="Buka menu">Menu</button>
+<nav class="links" id="lk"><a href="index.html">Beranda</a><a href="cari.html" class="on">Cari Barang</a><a href="laporkan.html">Laporkan</a><a href="cara-kerja.html">Cara Kerja</a><a href="faq.html">FAQ</a></nav></div></header>
+<main><div class="w">
+<div class="ph"><h1>Klaim barang</h1><p>Pastikan barang ini milikmu dengan melakukan verifikasi kepemilikan.</p></div>
+<form class="form" data-f="klaim">
+<div class="sum" id="cs"></div>
+<div class="row"><div class="f"><label for="c3">Nama *</label><input id="c3" required></div><div class="f"><label for="c4">Kontak *</label><input id="c4" required placeholder="No. HP atau email"></div></div>
+<div class="f"><label for="c1">Sebutkan ciri khusus barang yang tidak tercantum di deskripsi *</label><input id="c1" required placeholder="Contoh: ada gantungan kunci berbentuk..."></div>
+<p class="hint">Demi keamanan, jangan tuliskan seluruh ciri barang yang bersifat khusus pada laporan publik.</p>
+<div class="f"><label for="c2">Bukti kepemilikan (opsional)</label><input id="c2" type="file"></div>
+<button class="btn full" type="submit">Kirim permintaan klaim</button>
+<div class="ok" role="status"><b>Permintaan klaim terkirim ⏳</b><ol class="trk"><li class="on">Menunggu verifikasi</li><li>Verifikasi diterima</li><li>Verifikasi ditolak</li></ol><p style="margin:0 0 8px">Jika diterima, ambil barang di titik penitipan dengan membawa KTM. Jika ditolak, kamu bisa mengajukan ulang dengan ciri khusus yang lebih lengkap.</p><a href="cari.html">Kembali ke daftar barang</a></div>
+</form></div></main>
+<footer><div class="w"><div class="fl">
+<div><div class="logo" style="margin-bottom:8px">FINDUM</div>Lost &amp; Found Kampus<br>Satu platform untuk membantu barang kembali kepada pemiliknya.</div>
+<div><a href="index.html">Beranda</a><a href="cari.html">Cari Barang</a><a href="lapor-temuan.html">Lapor Temuan</a><a href="lapor-hilang.html">Lapor Kehilangan</a><a href="cara-kerja.html">Cara Kerja</a><a href="faq.html">FAQ</a></div>
+</div><small>© 2026 FINDUM. Data yang tampil adalah simulasi.</small></div></footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/claim.js"></script>
+</body>
+</html>

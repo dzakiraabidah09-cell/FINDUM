@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lapor Kehilangan — FINDUM Lost &amp; Found Kampus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><div class="w nav">
+<a class="logo" href="index.html"><i>🔎</i>FINDUM</a>
+<button class="burger" id="bg" aria-label="Buka menu">Menu</button>
+<nav class="links" id="lk"><a href="index.html">Beranda</a><a href="cari.html">Cari Barang</a><a href="laporkan.html" class="on">Laporkan</a><a href="cara-kerja.html">Cara Kerja</a><a href="faq.html">FAQ</a></nav></div></header>
+<main><div class="w">
+<div class="ph"><h1>Kehilangan barang?</h1><p>Laporkan barangmu supaya lebih mudah ditemukan.</p></div>
+<form class="form" data-f="hilang">
+<div class="row"><div class="f"><label for="h1">Nama barang *</label><input id="h1" required placeholder="Contoh: Tumbler"></div>
+<div class="f"><label for="h2">Kategori *</label><select id="h2" required data-cat></select></div></div>
+<div class="row"><div class="f"><label for="h3">Lokasi terakhir terlihat *</label><input id="h3" required placeholder="Contoh: Gedung FIK"></div>
+<div class="f"><label for="h4">Tanggal &amp; waktu kehilangan *</label><input id="h4" type="datetime-local" required></div></div>
+<div class="f"><label for="h5">Ciri-ciri barang *</label><textarea id="h5" required placeholder="Warna, merek, bentuk, stiker, tanda khusus, dll."></textarea></div>
+<div class="f"><label for="h9">Keterangan tambahan</label><textarea id="h9" style="min-height:64px" placeholder="Hal lain yang perlu diketahui"></textarea></div><div class="f"><label for="h10">Foto barang (opsional)</label><input id="h10" type="file" accept="image/*"></div><div class="row"><div class="f"><label for="h7">Nama pelapor *</label><input id="h7" required></div><div class="f"><label for="h8">Identitas mahasiswa (NIM) *</label><input id="h8" required></div></div><div class="f"><label for="h6">Kontak *</label><input id="h6" required placeholder="No. HP atau email"></div>
+<p class="hint">Kontak tidak ditampilkan secara publik dan hanya dipakai untuk verifikasi.</p>
+<button class="btn full" type="submit">Kirim laporan kehilangan</button>
+<div class="ok" role="status"><b>Laporan kehilangan berhasil dibuat! ✅</b><br>Kami akan mencocokkan laporanmu dengan barang yang ditemukan. <a href="index.html">Kembali ke Beranda</a><div id="mt"></div></div>
+</form></div></main>
+<footer><div class="w"><div class="fl">
+<div><div class="logo" style="margin-bottom:8px">FINDUM</div>Lost &amp; Found Kampus<br>Satu platform untuk membantu barang kembali kepada pemiliknya.</div>
+<div><a href="index.html">Beranda</a><a href="cari.html">Cari Barang</a><a href="lapor-temuan.html">Lapor Temuan</a><a href="lapor-hilang.html">Lapor Kehilangan</a><a href="cara-kerja.html">Cara Kerja</a><a href="faq.html">FAQ</a></div>
+</div><small>© 2026 FINDUM. Data yang tampil adalah simulasi.</small></div></footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/report.js"></script>
+</body>
+</html>
